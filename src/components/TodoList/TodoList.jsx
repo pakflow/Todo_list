@@ -1,12 +1,12 @@
 import React from "react";
 import { Button } from "antd";
-import { DeleteOutlined } from '@ant-design/icons';
+import { DeleteOutlined } from "@ant-design/icons";
 import "../../App.css";
 
-const TodoList = ({todo, setTodo}) => {
+const TodoList = ({ todo, setTodo }) => {
   function deleteTodo(id) {
-    let newTodo = [...todo].filter((item) => item.id !== id);
-    setTodo(newTodo);
+    let newTodos = [...todo].filter((item) => item.id !== id);
+    setTodo(newTodos);
   }
   return (
     <>
@@ -14,7 +14,7 @@ const TodoList = ({todo, setTodo}) => {
         <div className="block" key={item.id}>
           <span className="text">{item.title}</span>
           <Button type="primary" onClick={() => deleteTodo(item.id)}>
-          <DeleteOutlined />
+            <DeleteOutlined />
           </Button>
         </div>
       ))}
