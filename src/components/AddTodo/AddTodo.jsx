@@ -16,7 +16,6 @@ const AddTodo = ({ todo, setTodo }) => {
       setValue("");
     } else {
       alert("Превышен лимит");
-      return;
     }
   }
   return (
